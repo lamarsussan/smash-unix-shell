@@ -1,12 +1,9 @@
-# smash-unix-shell
 # Smash – Unix-like Shell
 
 Academic project completed as part of the Operating Systems course at the Technion.
 
 ## Overview
-Implemented a Unix-like shell in C++ with support for process management,
-foreground and background jobs, signal handling, external command execution,
-I/O redirection and pipes.
+Implemented a Unix-like shell in C++ with support for process management, foreground and background jobs, signal handling, external command execution, I/O redirection and pipes.
 
 ## Technologies
 - C++
@@ -15,9 +12,13 @@ I/O redirection and pipes.
 - Make
 
 ## Key Concepts
-- fork / exec
-- waitpid
-- signals
-- pipes
-- file descriptors
-- process groups
+- Process creation and management
+- `fork` / `exec`
+- `waitpid`
+- Signal handling
+- Pipes
+- File descriptors
+- Process groups
+
+## Note
+This repository is private because the project was completed as part of an academic course.
