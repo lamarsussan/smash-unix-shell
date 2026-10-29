@@ -20,5 +20,3 @@ Implemented a Unix-like shell in C++ with support for process management, foregr
 - File descriptors
 - Process groups
 
-## Note
-This repository is private because the project was completed as part of an academic course.
