@@ -18,7 +18,7 @@ string _rtrim(const std::string &s);
 
 
 class Command {
-    // TODO: Add your data members
+   
 protected:
     int args_num;
     bool is_background;
@@ -36,10 +36,6 @@ public:
     virtual ~Command();
 
     virtual void execute() = 0;
-
-    //virtual void prepare();
-    //virtual void cleanup();
-    // TODO: Add your extra methods if needed
 
     string getAlias() const
     {
@@ -98,7 +94,6 @@ public:
 
 
 class RedirectionCommand : public Command {
-    // TODO: Add your data members
     string command_type;
     string File;
     string command;
@@ -116,7 +111,6 @@ class PipeCommand : public Command {
     int pipeType;
     string first_cmd;
     string second_cmd;
-    // TODO: Add your data members
 public:
     PipeCommand(const char *cmd_line, int pipeType);
 
@@ -147,7 +141,6 @@ public:
 };
 
 class USBInfoCommand : public Command {
-    // TODO: Add your data members **BONUS: 10 Points**
 public:
     USBInfoCommand(const char *cmd_line);
 
@@ -158,7 +151,6 @@ public:
 };
 
 class ChangeDirCommand : public BuiltInCommand {
-    // TODO: Add your data members public:
 public:
     ChangeDirCommand(const char *cmd_line);
 
@@ -225,7 +217,6 @@ public:
             pid_t pid;
 
         public:
-            // TODO: Add your data members
             JobEntry(Command *c, int job_id, pid_t pid);
 
             ~JobEntry();
@@ -244,10 +235,8 @@ public:
 
         };
 
-        // TODO: Add your data members
 
         vector<JobEntry*> List;
-        //int counter;
         int max_id;
 
         JobsList();
@@ -272,7 +261,6 @@ public:
 
         JobEntry *getLastStoppedJob(int *jobId);
 
-        // TODO: Add extra methods or modify exisitng ones as needed
 
         void updateMaxJobId();
 
@@ -293,7 +281,6 @@ public:
 };
 
     class QuitCommand : public BuiltInCommand {
-        // TODO: Add your data members public:
     public:
         QuitCommand(const char *cmd_line);
 
@@ -304,7 +291,6 @@ public:
     };
 
     class JobsCommand : public BuiltInCommand {
-        // TODO: Add your data members
     public:
         JobsCommand(const char *cmd_line, JobsList *jobs);
 
@@ -315,7 +301,6 @@ public:
     };
 
     class KillCommand : public BuiltInCommand {
-        // TODO: Add your data members
     public:
         KillCommand(const char *cmd_line);
 
@@ -326,7 +311,6 @@ public:
     };
 
     class ForegroundCommand : public BuiltInCommand {
-        // TODO: Add your data members
     public:
         ForegroundCommand(const char *cmd_line);
 
@@ -375,8 +359,6 @@ public:
         string last_dir;
         vector<pair<string, string>> aliases;
 
-
-        // TODO: Add your data members
         SmallShell();
 
     public:
@@ -418,7 +400,6 @@ public:
 
         void executeCommand(const char *cmd_line);
 
-        // TODO: add extra methods as needed
     };
 
 #endif //SMASH_COMMAND_H_
