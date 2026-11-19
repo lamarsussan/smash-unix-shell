@@ -20,6 +20,18 @@ Smash is a Unix-like command-line shell developed in C++ using Linux/POSIX syste
 
 The project focuses on low-level systems programming, process management, job control, signal handling, and command execution.
 
+
+## 🎬 Live Demo
+
+See Smash in action! The demo showcases command execution, process management, pipes, and background job control.
+
+
+
+<img src="https://raw.githubusercontent.com/lamarsussan/smash-unix-shell/main/smash-terminal-demo.gif" alt="Smash Terminal Demo" width="850">
+
+
+
+
 ## ✨ Key Features
 
 ### ⚙️ Process Management
